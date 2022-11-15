@@ -14,6 +14,6 @@ module.exports={
     },
     actualizar:function(conexion, datos, funcion){
         conexion.query("UPDATE clientes SET nombre=?,apellido=?,telefono=?,cedula=?,tipo_usuario=? WHERE id=?",[datos.nombre, 
-        datos.apellido, datos.telefono, datos.cedula, datos.tipo_usuario, datos.id], funcion);
+        datos.apellido, datos.telefono, datos.cedula, 2, datos.id], funcion);
     }
 }
