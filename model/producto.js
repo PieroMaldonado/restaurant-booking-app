@@ -3,8 +3,8 @@ module.exports={
         conexion.query("SELECT * FROM productos", funcion);
     },
     insertar:function(conexion, datos, funcion){
-        conexion.query("INSERT INTO productos (nombre, descripcion, categoria) VALUES (?,?,?)",[datos.nombre, 
-        datos.descripcion, datos.categoria], funcion);
+        conexion.query("INSERT INTO productos (nombre, descripcion, categoria, precio) VALUES (?,?,?,?)",[datos.nombre, 
+        datos.descripcion, datos.categoria, datos.precio], funcion);
     },
     retornarDatosID:function(conexion, id, funcion){
         conexion.query("SELECT * FROM productos WHERE id=?",[id], funcion);
@@ -14,7 +14,7 @@ module.exports={
     },
     actualizar:function(conexion, datos, funcion){
         console.log(datos.categoria)
-        conexion.query("UPDATE productos SET nombre=?,descripcion=?,categoria=? WHERE id=?",[datos.nombre, 
-        datos.descripcion, datos.categoria, datos.id], funcion);
+        conexion.query("UPDATE productos SET nombre=?,descripcion=?,categoria=?,precio=? WHERE id=?",[datos.nombre, 
+        datos.descripcion, datos.categoria, datos.precio, datos.id], funcion);
     }
 }

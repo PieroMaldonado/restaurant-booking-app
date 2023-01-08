@@ -12,6 +12,7 @@
                     <th>Nombre</th>
                     <th>Descripción</th>
                     <th>Categoria</th>
+                    <th>Precio</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -22,6 +23,7 @@
                         <td> <%=productos[producto].nombre%> </td>
                         <td> <%=productos[producto].descripcion%> </td>
                         <td> <%=categorias[productos[producto].categoria].categoria%> </td>  
+                        <td> $ <%=productos[producto].precio%> </td>
                         <td>
                             <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
                                 <form class="form-inline" method="get" action="/productos/editar/<%=productos[producto].id%>">

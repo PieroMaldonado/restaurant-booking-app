@@ -29,6 +29,10 @@
                         <% } %>
                     </select>
                 </div><br>
+                <div class="form-group">
+                    <label for="my-input">Precio</label>
+                    <input id="my-input" value="<%=producto.precio%>" class="form-control" type="number" step="0.01" min="0" max="150" name="precio">
+                </div>
                 <button class="btn btn-success" type="submit">Actualizar</button>
                 <a class="btn btn-primary" href="/productos">Cancelar</a>
             </form>
